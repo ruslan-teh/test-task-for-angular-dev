@@ -1,0 +1,107 @@
+<div class="page">
+  <header class="header">
+    <div class="container">
+      <div class="header__top">
+        <h1 class="header__logo">LOGO</h1>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link nav__link--active" routerLink="/some" routerLinkActive="active">
+                <span class="nav__text" translate>Link 1</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" routerLink="/some" routerLinkActive="active">
+                <span class="nav__text" translate>Link 2</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" routerLink="/some" routerLinkActive="active">
+                <span class="nav__text" translate>Link 3</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" routerLink="/some" routerLinkActive="active">
+                <span class="nav__text" translate>Link 4</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="intro">
+        <div class="intro__content">
+          <h1 class="intro__title">Intro</h1>
+          <p class="intro__text">Some introduction lines about the website or company</p>
+        </div>
+        <div class="intro__box"></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="carousel">
+    <div class="container">
+      <div class="carousel__indicators">
+        <span class="carousel__indicator carousel__indicator--active"></span>
+        <span class="carousel__indicator"></span>
+        <span class="carousel__indicator"></span>
+        <span class="carousel__indicator"></span>
+      </div>
+    </div>
+  </section>
+
+  <main class="main">
+    <div class="container">
+      <div class="services-row">
+        <div class="service-box service-box--center">Services</div>
+        <div class="service-box service-box--bottom">Services</div>
+        <div class="service-box service-box--top">Services</div>
+      </div>
+
+      <div class="services-row">
+        <div class="service-box service-box--left">Services</div>
+        <div class="service-box service-box--right">Services</div>
+        <div class="service-box service-box--top-right">Services</div>
+      </div>
+
+      <div class="twitter">Twitter Feed, {{ '' | appUsername }}</div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <nav class="nav nav--footer">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a class="nav__link" routerLink="/some" routerLinkActive="active">
+                <span class="nav__text" translate>Link 1</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" routerLink="/some" routerLinkActive="active">
+                <span class="nav__text" translate>Link 2</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" routerLink="/some" routerLinkActive="active">
+                <span class="nav__text" translate>Link 3</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" routerLink="/some" routerLinkActive="active">
+                <span class="nav__text" translate>Link 4</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__info"><span>info</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="debug">
+    <h3 class="debug__title">Raw JSON:</h3>
+    <pre class="debug__content">{{ weatherData | json }}</pre>
+  </div>
+</div>
