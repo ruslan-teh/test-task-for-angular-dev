@@ -16,22 +16,15 @@ const log = new Logger('ErrorHandlerInterceptor');
 })
 export class ErrorHandlerInterceptor implements HttpInterceptor {
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    return next.handle(request).pipe(catchError((error) => this.errorHandler(error, request)));
+    return next.handle(request).pipe(catchError((error) => this.errorHandler(error)));
   }
-  private errorHandler(error: HttpErrorResponse, request: HttpRequest<any>): Observable<HttpEvent<any>> {
+  private errorHandler(error: HttpErrorResponse): Observable<HttpEvent<any>> {
     if (error.status === 404) {
       if (!environment.production) {
-        log.error('404 Not Found', {
-          url: request.url,
-          method: request.method,
-          error: error,
-        });
+        // Do something with the error
+        log.error('Request error');
       }
-      return throwError(() => ({
-        status: 404,
-        message: 'Ресурс не знайдено',
-        url: request.url,
-      }));
     }
+    return throwError(() => 'Ресурс не знайдено 404');
   }
 }
