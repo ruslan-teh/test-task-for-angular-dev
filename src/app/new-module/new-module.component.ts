@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherResponse } from '../new-module-interface';
+import { WeatherResponse } from './new-module-interface';
 
 @Component({
   selector: 'app-new-module',

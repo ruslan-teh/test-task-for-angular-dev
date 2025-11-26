@@ -15,7 +15,7 @@ import { ShellModule } from './shell/shell.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HttpErrorInterceptor } from './new-module/httpError-interceptor';
+import { ErrorHandlerInterceptor } from '@core/http/error-handler.interceptor';
 @NgModule({
   imports: [
     BrowserModule,
@@ -35,7 +35,7 @@ import { HttpErrorInterceptor } from './new-module/httpError-interceptor';
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
-      useClass: HttpErrorInterceptor,
+      useClass: ErrorHandlerInterceptor,
       multi: true,
     },
   ],
